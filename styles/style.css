@@ -9,13 +9,15 @@ body {
 
 main {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .container {
     background-color: white;
     width: 870px;
     padding: 30px;
+    margin-top: 21px;
 }
 
 .section-title {
@@ -76,4 +78,63 @@ hr {
 
 .shaoun {
     text-decoration: none;
+}
+
+/* coursessection */
+.course-details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 24px;
+}
+
+.image {
+    border: 2px solid aqua;
+    border-radius: 10px;
+}
+
+.image img {
+    width: 224px;
+    height: 104px;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.star {
+    font-size: 12px;
+}
+
+.filled {
+    color: yellow;
+}
+
+.empty {
+    color: grey;
+}
+
+.clock {
+    border: 1px solid palevioletred;
+    border-radius: 5px;
+    background-color: pink;
+}
+
+/*========== mediaqueries============== */
+@media screen and (max-width:688px) {
+    .container {
+        .top-players {
+            width: 100%
+        }
+
+        .players {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+
+
+
+    }
+
 }
