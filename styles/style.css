@@ -7,6 +7,8 @@ body {
     background-color: #F3F1FF;
 }
 
+
+
 main {
     display: flex;
     flex-direction: column;
@@ -124,17 +126,42 @@ hr {
 /*========== mediaqueries============== */
 @media screen and (max-width:688px) {
     .container {
-        .top-players {
-            width: 100%
-        }
-
-        .players {
-            grid-template-columns: repeat(1, 1fr);
-        }
-
-
-
-
+        width: 100%;
     }
+
+    .player,
+    .top-blogs {
+        flex-direction: column;
+    }
+
+    .players,
+    .stop-blog,
+    .course-details {
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+    }
+
+}
+
+/* tablet devices====== */
+
+@media only screen and (min-width: 688px) and (max-width:992px) {
+
+    .container {
+        width: 100%;
+    }
+
+    .player,
+    .top-blogs {
+        flex-direction: column;
+    }
+
+    .players,
+    .stop-blog,
+    .course-details {
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+    }
+
 
 }
